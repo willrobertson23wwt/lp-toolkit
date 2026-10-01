@@ -1,0 +1,74 @@
+{
+  "name": "lp-toolkit",
+  "version": "0.1.0",
+  "description": "The Remotion toolkit and video tools shared by every WWT learning path: the hand-drawn kit, the terminal kit, the WWT palette, MixTrack, ManimLayer, the cards, and the beats, captions, stills, transcribe and narration tools.",
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": "github:willrobertson23wwt/lp-toolkit",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./sketch": {
+      "types": "./dist/sketch/index.d.ts",
+      "default": "./dist/sketch/index.js"
+    },
+    "./terminal": {
+      "types": "./dist/terminal/kit.d.ts",
+      "default": "./dist/terminal/kit.js"
+    },
+    "./theme": {
+      "types": "./dist/theme.d.ts",
+      "default": "./dist/theme.js"
+    },
+    "./layout": {
+      "types": "./dist/layout.d.ts",
+      "default": "./dist/layout.js"
+    },
+    "./webpack": "./webpack.cjs",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "lp-beats": "bin/beats.mjs",
+    "lp-captions": "bin/captions.mjs",
+    "lp-stills": "bin/stills.mjs",
+    "lp-transcribe": "bin/transcribe.mjs",
+    "lp-generate-audio": "bin/generate-audio.mjs"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "lib",
+    "webpack.cjs"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -p tsconfig.json --watch",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepare": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "perfect-freehand": "1.2.3",
+    "roughjs": "4.6.6"
+  },
+  "peerDependencies": {
+    "@remotion/lottie": "^4.0.475",
+    "@remotion/media-utils": "^4.0.475",
+    "@remotion/noise": "^4.0.475",
+    "react": "^19",
+    "remotion": "^4.0.475"
+  },
+  "devDependencies": {
+    "@remotion/lottie": "4.0.486",
+    "@remotion/media-utils": "4.0.486",
+    "@remotion/noise": "4.0.486",
+    "@types/react": "19.2.17",
+    "lottie-web": "5.13.0",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "remotion": "4.0.486",
+    "typescript": "6.0.3"
+  }
+}
